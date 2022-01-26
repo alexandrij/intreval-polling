@@ -1,0 +1,32 @@
+{
+  "name": "interval-polling",
+  "version": "1.0.1",
+  "description": "Interval polling",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrij/interval-polling.git"
+  },
+  "files": [
+    "/dist",
+    "index.d.ts"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "tsc",
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "polling"
+  ],
+  "author": "adimitriev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
