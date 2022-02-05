@@ -30,4 +30,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/node_modules/
+
+dist
+node_modules
