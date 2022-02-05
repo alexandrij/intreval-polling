@@ -18,7 +18,6 @@
   "scripts": {
     "build": "npm run clean && npm run compile",
     "compile": "tsc",
-    "start": "ts-node -p ./examples/tsconfig.json examples/fake-request-polling.ts",
     "clean": "rm -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
