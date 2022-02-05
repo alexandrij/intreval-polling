@@ -16,10 +16,17 @@ const fakeRequest = async () => {
   });
 }
 
-intervalPolling(fetch("https://..."), 5000)
-  .error((e) => console.log(e))
-  .next((res) => console.log(res))
+const polling = intervalPolling(fakeRequest, 5000);
+polling.subscribe({
+  error: (e) => {
+    console.log(e); 
+    
+    // Завершение опроса
+    polling.close();
+  },
+  next: (res) => {
+    console.log(res)
+  }
+}
 
-// Завершение опроса
-intervalPolling.close();
 ```
