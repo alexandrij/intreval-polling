@@ -10,7 +10,8 @@
     "/dist",
     "index.d.ts"
   ],
-  "main": "index.js",
+  "main": "dist/interval-polling.js",
+  "types": "./dist/interval-polling.d.ts",
   "engines": {
     "node": ">= 10.0.0",
     "npm": ">= 6.0.0"
@@ -19,7 +20,7 @@
     "build": "npm run clean && npm run compile",
     "compile": "tsc",
     "clean": "rm -rf ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "polling"
@@ -27,6 +28,9 @@
   "author": "adimitriev",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.0",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.5.5"
   }
 }
