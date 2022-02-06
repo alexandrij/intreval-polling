@@ -21,7 +21,7 @@ export const intervalPolling = <T = unknown>(
   maxCount?: number,
 ): Observable<T> => {
   let closed = false;
-  let pollingTimerId: number;
+  let pollingTimerId: NodeJS.Timeout;
   const subscribers: Observer<T>[] = [];
   const onNext: SuccessObserver<T> = (value: T): void => {
     subscribers.forEach((subscriber) => {
